@@ -1,0 +1,34 @@
+---
+import PhotoGrid from './PhotoGrid.astro';
+import { featuredCollectionId, getImages } from '../data/imageStore';
+
+const images = [
+  '/images/car-4.jpg',
+  '/images/car-8.jpg',
+  '/images/car-5.jpg',
+  '/images/car-2.jpg',
+];
+---
+
+<div class="max-w-2xl mx-auto text-center mb-16">
+  <h2 class="text-3xl md:text-4xl font-bold mb-4">Driven by Passion</h2>
+  <p class="text-white/60 leading-relaxed">
+    "Since childhood, cars have fascinated me, and today I dedicate myself to making the passion, time, and commitment that owners invest in their vehicles visibly and emotionally tangible through professional photography."
+  </p>
+</div>
+
+<div class="p-4">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-8xl mx-auto">
+    {
+      images.map((image, index) => (
+        <div class="overflow-hidden rounded-2xl bg-white/5">
+          <img
+            src={image}
+            alt={`Featured image ${index + 1}`}
+            class="w-full aspect-[3/4] object-cover transition duration-500 hover:scale-105"
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
