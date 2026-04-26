@@ -1,7 +1,5 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-
-const success = Astro.url.searchParams.get("success");
 ---
 
 <MainLayout>
@@ -86,7 +84,8 @@ const success = Astro.url.searchParams.get("success");
         <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
           <div
               id="success-message"
-              class="hidden mb-6 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-green-300"
+              style="display: none;"
+              class="mb-6 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-green-300"
           >
           The enquiry has been sent successfully. Your request will be answered soon.
         </div>
@@ -167,12 +166,16 @@ const success = Astro.url.searchParams.get("success");
       </div>
     </div>
   </section>
-  <script>
-  const params = new URLSearchParams(window.location.search);
-  const success = params.get("success");
+  <script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const success = params.get("success");
+    const message = document.getElementById("success-message");
 
-  if (success === "1" || success === "true") {
-    document.getElementById("success-message")?.classList.remove("hidden");
-  }
+    if (message && (success === "1" || success === "true")) {
+      message.style.display = "block";
+    }
+  });
+</script>
 </script>
 </MainLayout>
