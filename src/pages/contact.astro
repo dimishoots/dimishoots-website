@@ -84,11 +84,12 @@ const success = Astro.url.searchParams.get("success");
 
         <!-- Form -->
         <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
-          {success === "1" && (
-            <div class="mb-6 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-green-300">
-              The enquiry has been sent successfully. Your request will be answered soon.
-            </div>
-          )}
+          <div
+              id="success-message"
+              class="hidden mb-6 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-green-300"
+          >
+          The enquiry has been sent successfully. Your request will be answered soon.
+        </div>
 
           <form
             method="POST"
@@ -166,4 +167,12 @@ const success = Astro.url.searchParams.get("success");
       </div>
     </div>
   </section>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const success = params.get("success");
+
+  if (success === "1" || success === "true") {
+    document.getElementById("success-message")?.classList.remove("hidden");
+  }
+</script>
 </MainLayout>

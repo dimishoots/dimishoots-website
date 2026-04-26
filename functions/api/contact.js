@@ -39,6 +39,7 @@ export async function onRequestPost({ request, env }) {
   }
 
   return Response.redirect(new URL("/contact?success=1", request.url), 303);
+  
 }
 
 function escapeHtml(value) {
