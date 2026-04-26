@@ -1,0 +1,40 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout>
+  <section class="pt-36 pb-12">
+    <div class="container-custom">
+      <div class="max-w-3xl">
+        <p class="text-sm uppercase tracking-[0.2em] text-white/40 mb-4">
+          Internal
+        </p>
+
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+          Tuning Database
+        </h1>
+
+        <p class="mt-6 text-white/70 text-lg leading-relaxed">
+          Internal lookup page.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-24">
+    <div class="container-custom">
+      <div class="rounded-2xl border border-white/10 bg-white p-3 md:p-4 shadow-2xl">
+        <iframe
+          src="https://tuning-shop.com/iframe/iframe.php?user=7418"
+          width="100%"
+          scrolling="no"
+          frameborder="0"
+          style="border:0; min-height:2200px;"
+          class="w-full rounded-xl"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://tuning-shop.com/media/js/iframe-loader.js"></script>
+</MainLayout>
