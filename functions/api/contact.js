@@ -28,7 +28,7 @@ export async function onRequestPost({ request, env }) {
       from: "Dimi Shoots <info@dimishoots.ch>",
       to: ["info@dimishoots.ch"],
       reply_to: email,
-      subject: `New enquiry: ${subject}`,
+      subject: `New enquiry from ${name} – ${subject}`,
       html,
     }),
   });
@@ -38,7 +38,7 @@ export async function onRequestPost({ request, env }) {
     return new Response(`Email sending failed: ${errorText}`, { status: 500 });
   }
 
-  return Response.redirect(new URL("/contact?success=true", request.url), 303);
+  return Response.redirect(new URL("/contact?success=1", request.url), 303);
 }
 
 function escapeHtml(value) {
