@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
 ---
 
 <MainLayout>
@@ -12,15 +12,16 @@ import MainLayout from '../layouts/MainLayout.astro';
     <div class="relative z-10 container-custom">
       <div class="max-w-3xl">
         <p class="text-sm uppercase tracking-[0.2em] text-white/40 mb-4">
-          Kontakt
+          Contact
         </p>
 
         <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
-          Melde dich
+          Get in Touch
         </h1>
 
         <p class="mt-6 text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl">
-          Für Shootings, Events, Projekte oder allgemeine Anfragen kannst du mir einfach schreiben.
+          For private shoots, event coverage, collaborations or general enquiries,
+          feel free to send a message.
         </p>
       </div>
     </div>
@@ -32,16 +33,16 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div class="space-y-10">
           <div>
             <p class="text-sm uppercase tracking-[0.2em] text-white/40 mb-3">
-              Anfrage
+              Enquiries
             </p>
 
             <h2 class="text-2xl md:text-3xl font-semibold text-white">
-              Lass uns etwas Sauberes und Stimmiges umsetzen.
+              Let’s create something clean and memorable.
             </h2>
 
             <p class="mt-4 text-white/65 leading-relaxed">
-              Ob Fahrzeugshooting, Event oder Projekt. Ich bin offen für ausgewählte Anfragen
-              mit klarem Fokus und sauberer Umsetzung.
+              Whether it is a personal vehicle shoot, event coverage or a creative collaboration,
+              I am open to selected projects with a strong visual identity.
             </p>
           </div>
 
@@ -92,7 +93,7 @@ import MainLayout from '../layouts/MainLayout.astro';
                 name="name"
                 type="text"
                 required
-                placeholder="Dein Name"
+                placeholder="Your name"
                 class="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-white/30 transition-colors duration-300"
               />
             </div>
@@ -107,14 +108,14 @@ import MainLayout from '../layouts/MainLayout.astro';
                 name="email"
                 type="email"
                 required
-                placeholder="deine@email.com"
+                placeholder="your@email.com"
                 class="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-white/30 transition-colors duration-300"
               />
             </div>
 
             <div>
               <label for="subject" class="block text-sm text-white/70 mb-2">
-                Betreff
+                Subject
               </label>
 
               <input
@@ -122,14 +123,14 @@ import MainLayout from '../layouts/MainLayout.astro';
                 name="subject"
                 type="text"
                 required
-                placeholder="Projektanfrage"
+                placeholder="Project enquiry"
                 class="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-white/30 transition-colors duration-300"
               />
             </div>
 
             <div>
               <label for="message" class="block text-sm text-white/70 mb-2">
-                Nachricht
+                Message
               </label>
 
               <textarea
@@ -137,7 +138,7 @@ import MainLayout from '../layouts/MainLayout.astro';
                 name="message"
                 rows="7"
                 required
-                placeholder="Erzähl kurz, worum es geht..."
+                placeholder="Tell me a bit about your enquiry..."
                 class="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-white/30 transition-colors duration-300 resize-none"
               ></textarea>
             </div>
@@ -146,7 +147,7 @@ import MainLayout from '../layouts/MainLayout.astro';
               type="submit"
               class="inline-block px-6 py-3 border border-white/60 rounded-md text-white hover:bg-white hover:text-black transition-all duration-300"
             >
-              Anfrage senden
+              Send Enquiry
             </button>
           </form>
         </div>

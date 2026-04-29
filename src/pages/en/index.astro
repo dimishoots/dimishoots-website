@@ -1,0 +1,30 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import LandingHero from '../../components/LandingHero-1_en.astro';
+import FeaturedGallery from '../../components/FeaturedGallery_en.astro';
+import FeaturedWorkScroll from '../../components/FeaturedWorkScroll.astro';
+---
+
+<MainLayout>
+<section
+  class="relative min-h-screen flex items-center py-20 md:py-16 overflow-hidden bg-cover bg-[position:50%_63%]"
+  style="background-image: url('/images/DSC00671.JPG');"
+>
+  <!-- Cinematic overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/75"></div>
+
+  <!-- Center content -->
+  <div class="relative z-10 w-full">
+    <LandingHero />
+  </div>
+
+  <!-- Featured work indicator pinned to bottom -->
+  <div class="absolute bottom-8 left-0 right-0 z-10">
+    <FeaturedWorkScroll />
+  </div>
+</section>
+
+	<section class="featured-section py-20">
+		<FeaturedGallery />
+	</section>
+</MainLayout>
